@@ -58,7 +58,6 @@ body {
 
 h1,
 h2 {
-  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   text-align: center;
 }
@@ -94,7 +93,8 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-blue);
+  background: var(--main-dark);
+  box-shadow: 0 5px 0 var(--main-grey);
   z-index: 10;
 }
 
@@ -120,5 +120,24 @@ img {
 }
 
 .nav-list a:hover {
-  background: var(--main-mint);
+  background: var(--main-grey);
+}
+
+.welcome-section {
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-blue);
+}
+
+.welcome-section > p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-pink);
 }

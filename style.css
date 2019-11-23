@@ -26,22 +26,18 @@ html {
   scroll-behavior: smooth;
 }
 
-
-/* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
     font-size: 60%;
   }
 }
 
-/* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
   html {
     font-size: 58%;
   }
 }
 
-/* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
   html {
     font-size: 55%;
@@ -50,7 +46,7 @@ html {
 
 body {
   font-family: 'Roboto Slab', serif;
-  font-size: 1.8rem; /* 18px */
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
   color: var(--main-white);
@@ -140,4 +136,131 @@ img {
   font-weight: 200;
   font-style: italic;
   color: var(--main-pink);
+}
+
+/* Projects */
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--main-grey);
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  color: var(--main-white);
+  border-bottom: 0.3rem solid var(--main-white);
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background: var(--main-blue);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  color: var(--main-white);
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+/* Contact */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: var(--main-dark);
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.contact-section-header > p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-pink);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+/* Footer */
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: var(--main-dark);
+  border-top: 5px solid var(--main-grey);
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
